@@ -1,0 +1,3 @@
+---
+go_user: "{{ vagrant_user }}"
+vagrant_user: vagrant

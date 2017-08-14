@@ -1,0 +1,22 @@
+---
+galaxy_info:
+  name: vagrant-go-dev
+  version: 'v1.0.0'
+  author: Naftuli Kay
+  description: Install and configure a Go development environment in a Vagrant machine.
+
+  license: MIT
+
+  min_ansible_version: 2.2
+
+  platforms:
+    - name: EL
+      versions: [7]
+    - name: Ubuntu
+      versions: [trusty, xenial]
+
+  galaxy_tags: [go,go-lang,vagrant]
+
+dependencies:
+  - role: naftulikay.go-dev
+  - role: naftulikay.vagrant-base
