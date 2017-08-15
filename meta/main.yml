@@ -1,7 +1,7 @@
 ---
 galaxy_info:
   name: vagrant-go-dev
-  version: 'v1.0.0'
+  version: 'v1.1.0'
   author: Naftuli Kay
   description: Install and configure a Go development environment in a Vagrant machine.
 
