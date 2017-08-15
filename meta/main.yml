@@ -20,3 +20,4 @@ galaxy_info:
 dependencies:
   - role: naftulikay.go-dev
   - role: naftulikay.vagrant-base
+    vagrant_init_dir: "{{ _vagrant_init_dir }}"

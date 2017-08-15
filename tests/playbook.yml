@@ -6,11 +6,14 @@
   tasks:
     - name: create user
       user: name={{ container_user }} comment="Container User" state=present
+    - name: create directory
+      file: state=directory path=/vagrant owner={{ container_user }} group={{ container_user }}
 
 - name: build
   hosts: localhost
   roles:
     - role: vagrant-go-dev
+      go_package: github.com/naftulikay/ansible-role-vagrant-go-dev
 
 - name: test
   hosts: localhost
@@ -20,4 +23,5 @@
       degoss_no_clean: true
       goss_file: goss.yml
       goss_addtl_dirs: [goss.d/]
-      goss_env_vars: {}
+      goss_env_vars:
+        cd_dir: "/home/vagrant/.go/src/github.com/naftulikay/ansible-role-vagrant-go-dev"
