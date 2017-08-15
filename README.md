@@ -13,6 +13,8 @@ A Vagrant machine which is an operating system/architecture supported by Go, whi
 <dl>
   <dt><code>vagrant_user</code></dt>
   <dd>The username of the Vagrant user, defaults to <code>vagrant</code></dd>
+  <dt><code>go_package</code></dt>
+  <dd>The full Go package name for your project, e.g. <code>github.com/naftulikay/go-test</code>.</dd>M
 </dl>
 
 > Please see the upstream [`naftulikay.vagrant-base`][vagrant-base] and [`naftulikay.go-dev`][go-dev] roles for
@@ -32,6 +34,7 @@ Install a Go development environment within the Vagrant machine:
 - hosts: all
   roles:
     - role: vagrant-go-dev
+      go_package: github.com/naftulikay/ansible-role-vagrant-go-dev
 ```
 
 ## LICENSE

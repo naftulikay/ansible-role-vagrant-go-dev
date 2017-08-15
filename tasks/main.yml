@@ -1,0 +1,25 @@
+---
+- name: fail when package is undefined
+  fail: msg="go_package must be set to the name of your Go package."
+  when: go_package is undefined
+
+- name: discover directories
+  set_fact:
+    go_package_dir: /home/{{ vagrant_user }}/.go/src/{{ go_package }}
+    go_package_parent: /home/{{ vagrant_user }}/.go/src/{{ go_package.split("/")[0:-1] | join("/") }}
+
+- name: create go package parent directory
+  file:
+    state: directory
+    path: "{{ go_package_parent }}"
+    owner: "{{ vagrant_user }}"
+    group: "{{ vagrant_user }}"
+    mode: "0700"
+
+- name: create go package symlink
+  file:
+    state: link
+    src: "{{ vagrant_shared_folder | default('/vagrant') }}"
+    dest: "{{ go_package_dir }}"
+    owner: "{{ vagrant_user }}"
+    group: "{{ vagrant_user }}"

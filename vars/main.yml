@@ -1,3 +1,4 @@
 ---
 go_user: "{{ vagrant_user }}"
+_vagrant_init_dir: "/home/vagrant/.go/src/{{ go_package }}"
 vagrant_user: vagrant
