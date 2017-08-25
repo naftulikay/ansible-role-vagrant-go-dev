@@ -2,13 +2,12 @@
 file:
   '/usr/local/go/bin/go': { exists: true }
   # test that the magic exists
-  /home/vagrant/.bashrc:
+  /etc/profile.d/vagrant-magic.sh:
     exists: true
-    mode: "0750"
-    owner: vagrant
-    group: vagrant
+    mode: "0755"
+    owner: root
+    group: root
     filetype: file
     contains:
-      - "#!/usr/bin/env bash"
       - "if [ $(history 2>/dev/null | wc -l) -eq 0 ]; then"
       - "cd \"{{.Env.cd_dir}}\""
