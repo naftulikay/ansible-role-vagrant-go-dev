@@ -14,7 +14,7 @@ A Vagrant machine which is an operating system/architecture supported by Go, whi
   <dt><code>vagrant_user</code></dt>
   <dd>The username of the Vagrant user, defaults to <code>vagrant</code></dd>
   <dt><code>go_package</code></dt>
-  <dd>The full Go package name for your project, e.g. <code>github.com/naftulikay/go-test</code>.</dd>M
+  <dd>The full Go package name for your project, e.g. <code>github.com/naftulikay/go-test</code>.</dd>
 </dl>
 
 > Please see the upstream [`naftulikay.vagrant-base`][vagrant-base] and [`naftulikay.go-dev`][go-dev] roles for
