@@ -1,7 +1,7 @@
 ---
 galaxy_info:
   name: vagrant-go-dev
-  version: 'v1.1.0'
+  version: 'v1.1.1'
   author: Naftuli Kay
   description: Install and configure a Go development environment in a Vagrant machine.
 
@@ -20,4 +20,3 @@ galaxy_info:
 dependencies:
   - role: naftulikay.go-dev
   - role: naftulikay.vagrant-base
-    vagrant_init_dir: "{{ _vagrant_init_dir }}"

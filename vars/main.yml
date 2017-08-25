@@ -1,4 +1,5 @@
 ---
-go_user: "{{ vagrant_user }}"
-_vagrant_init_dir: "/home/vagrant/.go/src/{{ go_package }}"
+vagrant_init_dir: "$HOME/.go/src/{{ go_package }}"
 vagrant_user: vagrant
+
+go_user: "{{ vagrant_user }}"
