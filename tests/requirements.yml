@@ -1,6 +1,5 @@
 ---
 - name: degoss
   src: naftulikay.degoss
-  version: v1.2.1
 - src: naftulikay.go-dev
 - src: naftulikay.vagrant-base

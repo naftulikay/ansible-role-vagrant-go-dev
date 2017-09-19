@@ -2,7 +2,7 @@
 file:
   '/usr/local/go/bin/go': { exists: true }
   # test that the magic exists
-  /etc/profile.d/vagrant-magic.sh:
+  '/etc/profile.d/vagrant-magic.sh':
     exists: true
     mode: "0755"
     owner: root
@@ -11,3 +11,15 @@ file:
     contains:
       - "if [ $(history 2>/dev/null | wc -l) -eq 0 ]; then"
       - "cd \"{{.Env.cd_dir}}\""
+  # test that go configuration exists
+  '/etc/profile.d/go.sh':
+    exists: true
+    mode: "0755"
+    owner: root
+    group: root
+    filetype: file
+    contains:
+      - /\bGOROOT\b/
+      - /\bGOPATH\b/
+      - /\bPATH\b/
+      - /\$HOME/\.go/bin\b/
